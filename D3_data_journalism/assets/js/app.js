@@ -86,11 +86,11 @@ d3.csv("assets/data/data.csv").then(function(ScatterData) {
     // Initalize Tooltip
     
 
-    let tip = d3-tip()
+    let tip = d3.tip()
        .attr("class", "d3-tip")
        .offset([80, -60])
        .html(function(d) {
-        return (`${d.poverty}<br>Hair length: ${d.healthcare}<br>`);
+        return (`${d.poverty}<br>${d.healthcare}<br>`);
     }); 
 
 
