@@ -90,7 +90,7 @@
         .attr("class","d3-tip")
         .offset([80, -60])
         .html(function(d){
-            return(`${d.state}<br>Population In Povery (%): ${d.poverty}<br> Healthcare (%):${d.healthcare}`)
+            return(`${d.state}<br>Population In Povery (%) : ${d.poverty}<br> Healthcare (%) : ${d.healthcare}`)
         });
 
     // Step 2: Create the tooltip in chartGroup.
@@ -114,12 +114,12 @@
         .attr("x", 0 - (height / 1.30))
         .attr("dy", "1em")
         .attr("class", "aText")
-        .text("Lacks Healthcare (%)");
+        .text("Lacks Healthcare (%) ");
 
         chartGroup.append("text")
-       // .attr("transform", `translate(${width /2.5}, ${height + margin.top + 180})`)
+        .attr("transform", `translate(${width /2.5}, ${height + margin.top + 50})`)
         .attr("class", "aText")
-        .text("In Poverty (%)");
+        .text("In Poverty (%) ");
 
 });
 
