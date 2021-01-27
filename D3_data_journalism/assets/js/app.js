@@ -84,7 +84,20 @@
             .text(function(data) {
                 return data.abbr
             });
-        
+    // Create axes labels  
+        chartGroup.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 0 - margin.left - 5)
+        .attr("x", 0 - (height / 1.30))
+        .attr("dy", "1em")
+        .attr("class", "aText")
+        .text("Lacks Healthcare (%) ");
+
+        chartGroup.append("text")
+        .attr("transform", `translate(${width /2.5}, ${height + margin.top + 50})`)
+        .attr("class", "aText")
+        .text("In Poverty (%) ");
+
     // Step 1: Initialize Tooltip    
         let tooltip = d3.tip()
         .attr("class","d3-tip")
@@ -107,19 +120,7 @@
             tooltip.hide(d);
         });
 
-     // Create axes labels  
-        chartGroup.append("text")
-        .attr("transform", "rotate(-90)")
-        .attr("y", 0 - margin.left - 5)
-        .attr("x", 0 - (height / 1.30))
-        .attr("dy", "1em")
-        .attr("class", "aText")
-        .text("Lacks Healthcare (%) ");
-
-        chartGroup.append("text")
-        .attr("transform", `translate(${width /2.5}, ${height + margin.top + 50})`)
-        .attr("class", "aText")
-        .text("In Poverty (%) ");
+     
 
 });
 
